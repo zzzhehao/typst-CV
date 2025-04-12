@@ -1,0 +1,257 @@
+---
+title: ""
+format: typst
+---
+
+<!-- This file is adapted qmd version of NNJR typst template: https://github.com/tzx/NNJR -->
+
+```{=typst}
+#import "template.typ": resume, header, resume_heading, edu_item, exp_item, teaching_item, conf_item, expedition_item, skill_item, reference_item
+
+#let latex = {
+    set text(font: "New Computer Modern")
+    box(width: 2.55em, {
+      [L]
+      place(top, dx: 0.3em, text(size: 0.7em)[A])
+      place(top, dx: 0.7em)[T]
+      place(top, dx: 1.26em, dy: 0.22em)[E]
+      place(top, dx: 1.8em)[X]
+    })
+}
+#show "LaTeX": latex
+
+#show: resume
+
+#let aff = (
+    UHHBio: "Department of Biology, University of Hamburg",
+    DZMB: "German Centre for Marine Biodiversity Research (DZMB)",
+    UHH: "University of Hamburg",
+    OC: "Ocean Census"
+)
+
+#let loc = (
+    HH: "Hamburg, Germany",
+    SSI: "South Sandwich Islands"
+)
+
+#let add = (
+    IZS: "Address IZS",
+    DZMBHH: "Address DZMB"
+)
+
+#let role = (
+    TA: "Teaching Assistant",
+    RA: "Research Assistant"
+)
+
+#header(
+    name: "Zhehao Hu",
+    phone: "<Tel no.>",
+    email: "zhehao.hu@uni-hamburg.de",
+    linkedin: "linkedin.com/in/huzhehao",
+    site: "zzzhehao.github.io"
+)
+
+#set block(breakable: false)
+#block[
+#resume_heading[Education]
+#edu_item(
+    name: aff.UHH,
+    degree: "Master of Science in Biology",
+    location: loc.HH,
+    date: "10/2023 - 11/2025",
+    courses: (
+        "Marine Deep-Sea Benthic Habitats and Biodiversity",
+        "Community Ecology",
+        "Evolutionary Systematics",
+        "Network Analysis in Ecology and Beyond",
+        "Molecular Parasitology (offered by BNITM)",
+        "Cellular and Molecular Immunology (offered by BNITM)"
+    ),
+    courseworks: (
+        "Influence of Microhabitats on Tadpole Composition in Ranomafana, Madagascar",
+        "Big Stew: Microbial Community Difference Along Water Columns in Mediterranean Sea" 
+    )
+)
+]
+#edu_item(
+    name: aff.UHH,
+    degree: "Bachelor of Science in Biology",
+    location: loc.HH,
+    date: "10/2020 - 3/2024",
+    courses: (
+        "Biological Oceanography and Fisheries Science",
+        "Methods of Open Field Ecology",
+        "Biodiversity of Fungi",
+        "Introduction of Geographic Information System",
+        "Molecular Methods of Animal Physiology",
+        "Data Analysis in Ecology with R"
+    ),
+    courseworks: (
+        "Gradient Analysis of Floodplain Grassland: Species Composition (German)",
+        "Understanding Hemocyanin Evolution Using Molecular and Biochemical Methods (German)"
+    ),
+    thesis: (
+      name: [Various _Wolbachia_ communities in the female-biased flea beatle _Altica lythri_],
+      supervisor: "Prof. Dr. Susanne Dobler, Dr. Kim Rohlfing",
+      grade: "4.0/4.0"
+    )
+)
+
+#set block(breakable: false)
+#block[
+#resume_heading[Experience]
+#exp_item(
+    role: "Research Assistant",
+    name: aff.DZMB,
+    location: loc.HH,
+    date: "01/2025 - Present",
+    points: (
+        [Species description of _Acanthocope sp. nov._],
+    )
+)
+]
+#exp_item(
+    role: "Onboard Taxonomist",
+    name: aff.OC,
+    location: [R/V _Falkor (too)_],
+    date: "02/2025 - 03/2025",
+    points: (
+        [Assisted ROV operation and sampling preservation during the expedition Ocean Census GoSouth: Searching for New Species in South Sandwich Islands (FKt250220)],
+    )
+)
+#exp_item(
+    role: "Research Assistant Internship",
+    name: aff.DZMB,
+    location: loc.HH,
+    date: "10/2024 - 12/2024",
+    points: (
+        [Species delimitation analysis of Atlantic _Acanthocope_ (Isopoda: Asellota: Munnopsidae) with specimens collected from expeditions IceAGE3 (2020), IceDivA1 (2021), IceDivA2 (2021).],
+        [Integrative taxonomy approach combining morphology (bright-field microscopy, CLSM), genetics (DNA barcoding), and proteomics (MALDI-TOF) to assess biogeographic assessment.]
+    )
+)
+#exp_item(
+    role: "Research Assistant",
+    name: aff.UHH + [, Group Neurophysiology],
+    location: loc.HH,
+    date: "07/2024 - Present",
+    points: (
+        [Assisted genotyping of the experimental animals.],
+    )
+)
+#exp_item(
+    role: "Student Assistant",
+    name: aff.UHH + [, Group Molecular Evolutionary Biology],
+    location: loc.HH,
+    date: "08/2023 - 03/2024",
+    points: (
+        [Assisted DNA/RNA-extraction and laboratory organization.],
+        [Developed novel protocols for rapid and bulk extraction of DNA or RNA.]
+    )
+)
+#exp_item(
+    role: "Laboratory Technician",
+    name: "Eurofins BioTesting Service Nord GmbH",
+    location: loc.HH,
+    date: "06/2023 - 07/2023",
+    points: (
+        [Operated _in vitro_ diagnostic tests (ISO 17822) for testing _Salmonella spp._, _Listeria monocytogenes_ and _Vibrio spp._ from marketed food products.],
+        [Developed laboratory skills to navigate a fast-paced working environment while maintaining standardized procedures and ensuring compliance with safety regulations in a biosafety level 2 laboratory.]
+    )
+)
+
+#set block(breakable: false)
+#block[
+#resume_heading[Teaching Experience]
+#teaching_item(
+    role: role.TA,
+    course: "Animal Physiology",
+    affiliation: "University of Hamburg",
+    date: "10/2022 - 11/2023",
+    scale: "24 classes, 200+ students total",
+    location: loc.HH,
+    points: (
+        "2nd year mandatory practical course for the B.Sc. Biology program.",
+        "Supported in assessing course plan, assisted students on molecular experiments (cell counting, SDS-PAGE, ECG, enzyme activity measurement, basic data interpretation)"
+    )
+)
+]
+#teaching_item(
+    role: role.TA,
+    course: "Evolutionary Ecology",
+    affiliation: "University of Hamburg",
+    date: "11/2023 - 11/2023",
+    scale: "1 class, 12 students",
+    location: loc.HH,
+    points: (
+        "3rd year elective practical course for the B.Sc. Biology program.",
+        "Supported and advised students on molecular experiments (PCR, gel-electrophoresis, ICC, result interpretation)"
+    )
+)
+
+#set block(breakable: false)
+#block[
+#resume_heading("Conference Activities")
+#conf_item(
+    title: [Detecting _Wolbachia_ Infection With Real-time PCR in Female-biased Flea Beatle _Altica lythri_],
+    form: "Poster",
+    event: "115th Annual Conference of the German Zoological Society",
+    date: "09/2023",
+    location: "Kassel, Germany"
+)
+]
+
+#set block(breakable: false)
+#block[
+#resume_heading("Expeditions")
+#expedition_item(
+    title: "Ocean Census GoSouth: Searching for New Species in South Sandwich Islands",
+    id: "FKt250220",
+    vessel: [R/V _Falkor (too)_],
+    location: loc.SSI,
+    date: "02/2025 - 03/2025",
+    period: "35 Days",
+    role: "Ocean Census Onboard Taxonomist (Generalist, Isopoda)",
+    ops: ("Remotely Operated Vehicle (ROV)",)
+)
+]
+
+#set block(breakable: false)
+#block[
+#resume_heading("Technical Skills")
+#skill_item(
+    category: "Molecular Biological Tools",
+    skills: "PCR techniques, SDS-PAGE, Western blot, MALDI-TOF, Cloning"
+)
+#skill_item(
+    category: "Cell Biology and Immunology Techniques",
+    skills: "ICC, Cell culture, ELISA, ELISpot, FACS, CLSM"
+)
+#skill_item(
+    category: "Programming Languages and technical writing",
+    skills: [R, Python 3, HTML, CSS, LaTeX, Typst, Quarto]
+)
+#skill_item(
+    category: "Data Analysis Tools",
+    skills: [Multivariate analysis, BLAST, ImageJ (Fiji), Adobe Creative Softwares, DaVinci Resolve, R/Python-based GIS]
+)
+#skill_item(
+    category: "Languages",
+    skills: "German, English, Mandarin (Native), Japanese (Limited)"
+)
+]
+
+// #set block(breakable: false)
+// #block[
+// #resume_heading("References")
+// #reference_item(
+//     person: "John Doe",
+//     affiliation: aff.DZMB,
+//     address: add.DZMBHH,
+//     email: "john.doe@gmail.com",
+//     infos: (
+//         "First super visor of my bachelor thesis",
+//     )
+// )
+// ]
+```
