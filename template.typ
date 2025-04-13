@@ -13,11 +13,12 @@
 
   set text(
     size: 11pt,
-    // font: "Arial",
+    font: "Arial",
   )
 
   body
 }
+
 
 #let name_header(name) = {
   set text(size: 2.25em)
@@ -47,7 +48,7 @@
   show heading: set text(size: 0.92em, weight: "regular")
 
   block[
-    = #smallcaps(txt)
+    = #smallcaps[#text(font: "libertinus serif")[#txt]]
     #v(-4pt)
     #line(length: 100%, stroke: 1pt + black)
   ]
@@ -67,7 +68,7 @@
     #grid(
         columns: (3fr, 2fr), 
         align(left)[
-        == #smallcaps[#name] \
+        == #smallcaps[#text(font: "libertinus serif")[#name]] \
         _#degree _ \  
         ],
         align(right)[
@@ -77,14 +78,14 @@
     )
 
     #if courses != () {
-        [*Courses:* \
+        [Courses \
         #for course in courses {
         [ - #course ]  
         }]
     }
 
     #if courseworks != () {
-        [*Courseworks:* \
+        [Courseworks \
         #for cw in courseworks {
         [ - #cw ]  
         }]
@@ -109,7 +110,7 @@
       #grid(
         columns: (3fr, 1.2fr),
         align(left)[
-          == #smallcaps[#role] \
+          == #smallcaps[#text(font: "libertinus serif")[#role]] \
           _#name _
         ],
         align(right)[
@@ -139,7 +140,7 @@
         #grid(
         columns: (3fr, 1.2fr),
         align(left)[
-          #text(size: 13pt)[*#smallcaps[#course]*] | #role \
+          #text(size: 13pt)[*#smallcaps[#text(font: "libertinus serif")[#course]]*] | #role \
           _#affiliation _ \
           #scale
         ],
@@ -165,7 +166,7 @@
 ) = {
     set block(above: 0.7em, below: 0.5em)
     pad(left: 1em, right: 0.5em, bottom: 1em, box[
-        *#title*
+        *#text(font: "libertinus serif", size: 13pt)[#title]*
         #grid(
         columns: (3fr, 1fr),
         align(left)[
@@ -195,7 +196,7 @@
 ) = {
     set block(above: 0.7em, below: 0.5em)
     pad(left: 1em, right: 0.5em, bottom: 1em, box[
-        *#title* (#id)
+        *#text(font: "libertinus serif", size: 13pt)[#title]* (#id)
         #grid(
             columns: (3fr, 1.5fr),
             align(left)[
@@ -232,7 +233,7 @@
   category: "Skills",
   skills: "Balling, Yoga, Valorant",
 ) = {
-  set block(above: 0.7em)
+  set block(above: 0.7em, below: 1em)
   set text(size: 0.91em)
   pad(left: 1em, right: 0.5em, block[*#category*: #skills])
 }
@@ -245,7 +246,7 @@
     tel: "",
     infos: none
 ) = {
-    set block(above: 0.7em, below: 1em)
+    set block(above: 1em, below: 1em)
     pad(left: 1em, right: 0.5em, bottom: 1em, box[
         === #person
         #if affiliation != "" {
