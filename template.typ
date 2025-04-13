@@ -188,6 +188,8 @@
     date: "",
     period: "",
     role: "",
+    CI: "",
+    PI: "",
     ops: none,
     points: none
 ) = {
@@ -205,15 +207,22 @@
             #location 
             ]
         )
+        #if CI != "" {
+            [Chief Scientist: #CI \ ]
+        }
+        #if PI != "" {
+            [Onboard Princible Investigator: #PI \ ]
+        }
         #if ops != none {
-            [#for op in ops {
-            [Corresponding Gear: \
-            - #op ]  
+            [Corresponding Gears: \
+            #for op in ops {
+            [- #op ]  
             }]
         }
         #if points != none {
-            [#for point in points {
-            [ - #point ]  
+            [Experiences: \ 
+            #for point in points {
+            [- #point ]  
             }]
         }
     ])

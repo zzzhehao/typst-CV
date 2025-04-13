@@ -17,8 +17,8 @@ Contents are directly written in raw Typst in `CV.qmd`, while formatting and lay
 
 ## Example
 
-An example pdf [here](./CV_censored.pdf)
+You may find the demo pdf [here](./CV_censored.pdf)
 
-![Example PDF page 1](./example-1.png)
+![Example PDF page 1](./example_Page_1.png)
 
-![Example PDF page 2](./example-2.png)
+![Example PDF page 2](./example_Page_2.png)

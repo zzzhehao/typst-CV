@@ -165,19 +165,6 @@ format: typst
 #resume_heading[Teaching Experience]
 #teaching_item(
     role: role.TA,
-    course: "Animal Physiology",
-    affiliation: "University of Hamburg",
-    date: "10/2022 - 11/2023",
-    scale: "24 classes, 200+ students total",
-    location: loc.HH,
-    points: (
-        "2nd year mandatory practical course for the B.Sc. Biology program.",
-        "Supported in assessing course plan, assisted students on molecular experiments (cell counting, SDS-PAGE, ECG, enzyme activity measurement, basic data interpretation)"
-    )
-)
-]
-#teaching_item(
-    role: role.TA,
     course: "Evolutionary Ecology",
     affiliation: "University of Hamburg",
     date: "11/2023 - 11/2023",
@@ -188,6 +175,20 @@ format: typst
         "Supported and advised students on molecular experiments (PCR, gel-electrophoresis, ICC, result interpretation)"
     )
 )
+]
+#teaching_item(
+    role: role.TA,
+    course: "Animal Physiology",
+    affiliation: "University of Hamburg",
+    date: "10/2022 - 11/2023",
+    scale: "24 classes, 200+ students total",
+    location: loc.HH,
+    points: (
+        "2nd year mandatory practical course for the B.Sc. Biology program.",
+        "Supported in assessing course plan, assisted students on molecular experiments (cell counting, SDS-PAGE, ECG, enzyme activity measurement, basic data interpretation)"
+    )
+)
+
 
 #set block(breakable: false)
 #block[
@@ -212,13 +213,20 @@ format: typst
     date: "02/2025 - 03/2025",
     period: "35 Days",
     role: "Ocean Census Onboard Taxonomist (Generalist, Isopoda)",
-    ops: ("Remotely Operated Vehicle (ROV)",)
+    CI: "Prof. Dr. Michelle Taylor",
+    PI: "Joe Sharman (Head of Expedition), Dr. Jenny Gales (Leader of GoSouth)",
+    ops: ([Remotely Operated Vehicle ROV _SuBastian_],),
+    points: (
+        [Served as generalist with focus on Isopoda as an Ocean Census taxonomist to assist marine life discovery.],
+        [Assisted ROV operation, species identification, and specimens preservation.],
+        [Developed R scripts for rapid access to ROV visual files and sealog data.]
+    )
 )
 ]
 
 #set block(breakable: false)
 #block[
-#resume_heading("Technical Skills")
+#resume_heading("Skills")
 #skill_item(
     category: "Molecular Biological Tools",
     skills: "PCR techniques, SDS-PAGE, Western blot, MALDI-TOF, Cloning"
@@ -228,7 +236,7 @@ format: typst
     skills: "ICC, Cell culture, ELISA, ELISpot, FACS, CLSM"
 )
 #skill_item(
-    category: "Programming Languages and technical writing",
+    category: "Programming Languages and Technical Writing",
     skills: [R, Python 3, HTML, CSS, LaTeX, Typst, Quarto]
 )
 #skill_item(
@@ -240,6 +248,7 @@ format: typst
     skills: "German, English, Mandarin (Native), Japanese (Limited)"
 )
 ]
+
 
 // #set block(breakable: false)
 // #block[
