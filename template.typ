@@ -21,7 +21,7 @@
 
 
 #let name_header(name) = {
-  set text(size: 2.25em)
+  set text(size: 2.25em, font: "libertinus serif")
   [*#name*]
 }
 

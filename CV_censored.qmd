@@ -213,7 +213,7 @@ format: typst
     date: "02/2025 - 03/2025",
     period: "35 Days",
     role: "Ocean Census Onboard Taxonomist (Generalist, Isopoda)",
-    CI: "Prof. Dr. Michelle Taylor",
+    CI: "Dr. Michelle Taylor",
     PI: "Joe Sharman (Head of Expedition), Dr. Jenny Gales (Leader of GoSouth)",
     ops: ([Remotely Operated Vehicle ROV _SuBastian_],),
     points: (
